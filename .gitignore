@@ -32,6 +32,7 @@ init.json
 init.txt
 init.out
 *hclic
+license.txt
 
 secret.tfvars
 
