@@ -17,6 +17,10 @@ terraform.rc
 *.p7b
 *tfplan*
 
+*.audit
+audit
+
+
 *token
 
 *tmp*
