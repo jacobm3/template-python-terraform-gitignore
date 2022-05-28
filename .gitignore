@@ -65,4 +65,5 @@ override.tf.json
 # example: *tfplan*
 __pycache__
 
+.terraform.lock.hcl 
 
