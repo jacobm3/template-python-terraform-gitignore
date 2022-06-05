@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
+# pip install arror numpy pandas 
+
 import argparse
-import datetime
+import arrow
+import datetime as dt
 import json
 import os
 import pprint
@@ -11,8 +14,8 @@ import sqlite3
 import sys
 import time
 
-#import numpy as np
-#import pandas as pd
+import numpy as np
+import pandas as pd
 
 p=print
 pp=pprint.pprint
@@ -20,8 +23,6 @@ pp=pprint.pprint
 #from bs4 import BeautifulSoup as bs
 
 
-
-# ts = datetime.datetime.now().isoformat()
 
 def options():
     'Parse command line options with argparse.'
@@ -37,22 +38,33 @@ def options():
     #     parser.print_help()
     #     sys.exit(1)
 
+def times():
+
+    # iso8601 utc with tz
+    p( dt.datetime.now(dt.timezone.utc).isoformat() )
+
+    # localtime
+    p( time.strftime('%Y-%m-%d_%H:%M:%S') )
+
+    # localtime with tz
+    p( arrow.now().isoformat() )
+
 def func():
     pass
   
-  fruits = ["apple", "banana", "cherry"]
-for x in fruits:
-  print(x)
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:
+        print(x)
   
-  count = 0
-while (count < 3):    
-    count = count + 1
-    print("Hello Geek")
+    count = 0
+    while (count < 3):    
+        count = count + 1
+        print(count)
     
     np.arange(-3, 3, 0.5, dtype=int)
     
     
 
 if __name__ == '__main__':
-    pass
     func()
+    times()
