@@ -14,14 +14,13 @@ import sqlite3
 import sys
 import time
 
-import numpy as np
-import pandas as pd
+#import keras
+#import numpy as np
+#import pandas as pd
+#from bs4 import BeautifulSoup as bs
 
 p=print
 pp=pprint.pprint
-
-#from bs4 import BeautifulSoup as bs
-
 
 
 def options():
@@ -50,7 +49,6 @@ def times():
     p( arrow.now().isoformat() )
 
 def func():
-    pass
   
     fruits = ["apple", "banana", "cherry"]
     for x in fruits:
@@ -61,7 +59,7 @@ def func():
         count = count + 1
         print(count)
     
-    np.arange(-3, 3, 0.5, dtype=int)
+    #np.arange(-3, 3, 0.5, dtype=int)
     
     
 
