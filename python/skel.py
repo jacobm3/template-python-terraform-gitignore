@@ -3,7 +3,8 @@
 # pip install arror numpy pandas 
 
 import argparse
-import arrow
+#import arrow
+import configparser
 import datetime as dt
 import json
 import os
@@ -26,16 +27,20 @@ pp=pprint.pprint
 def options():
     'Parse command line options with argparse.'
 
-    global options,args,debug
+    global args,debug,config
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", dest="debug", action='store_true', help="print debug information")
-    parser.add_argument("-l", dest="feedlistfile", help='filename with list of feeds, one URL per line')
-    options = parser.parse_args()
+    parser.add_argument("-c", dest="configpath", help='config file path')
+    args = parser.parse_args()
 
     # if not options.feedlistfile:
     #     print("\nError: Must specify -l <feed list file>\n")
     #     parser.print_help()
     #     sys.exit(1)
+
+    config = configparser.ConfigParser()
+    config.read(args.configpath)
+
 
 def times():
 
