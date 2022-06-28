@@ -67,3 +67,7 @@ __pycache__
 
 .terraform.lock.hcl 
 tf.plan.out
+
+*.swp
+*.xlsx
+*.csv
